@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: app-eureka-center
+  cloud:
+    inetutils: #网卡设置
+      ignored-interfaces: ##忽略的网卡
+        -vm.*
+      preferred-networks: ##优先的网段
+        -192.168
