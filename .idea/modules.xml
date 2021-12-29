@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app-cloud.iml" filepath="$PROJECT_DIR$/app-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-eureka/app-eureka.iml" filepath="$PROJECT_DIR$/app-eureka/app-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-provider/app-provider.iml" filepath="$PROJECT_DIR$/app-provider/app-provider.iml" />
     </modules>
   </component>
 </project>
