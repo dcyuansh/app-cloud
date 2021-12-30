@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: app-common
+server:
+  port: 443
+
+
+
+
