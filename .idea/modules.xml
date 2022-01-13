@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app-cloud.iml" filepath="$PROJECT_DIR$/app-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-common/app-common.iml" filepath="$PROJECT_DIR$/app-common/app-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-eureka/app-eureka.iml" filepath="$PROJECT_DIR$/app-eureka/app-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-feign/app-feign.iml" filepath="$PROJECT_DIR$/app-feign/app-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider/app-provider.iml" filepath="$PROJECT_DIR$/app-provider/app-provider.iml" />
     </modules>
   </component>

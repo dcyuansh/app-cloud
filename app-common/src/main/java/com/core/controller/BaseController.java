@@ -66,7 +66,7 @@ public abstract class BaseController {
      * @return
      */
     public Map<String, Object> handleSuccess(DataModel resultMap) {
-        return this.handleSuccess(null, resultMap);
+        return this.handleSuccess(resultMap, null);
     }
 
 
@@ -76,7 +76,7 @@ public abstract class BaseController {
      * @param resultMap
      * @return
      */
-    public Map<String, Object> handleSuccess(Object obj, DataModel resultMap) {
+    public Map<String, Object> handleSuccess(DataModel resultMap, Object obj) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
@@ -95,7 +95,7 @@ public abstract class BaseController {
      * @param resultMap
      * @return
      */
-    public Map<String, Object> handleValidationException(ValidationException ve, DataModel resultMap) {
+    public Map<String, Object> handleValidationException(DataModel resultMap, ValidationException ve) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }
@@ -115,7 +115,7 @@ public abstract class BaseController {
      * @param resultMap
      * @return
      */
-    public Map<String, Object> handleException(Exception e, DataModel resultMap) {
+    public Map<String, Object> handleException(DataModel resultMap, Exception e) {
         if (resultMap == null) {
             resultMap = new DataModel();
         }

@@ -25,6 +25,7 @@
         <module>app-eureka</module>
         <module>app-provider</module>
         <module>app-common</module>
+        <module>app-feign</module>
     </modules>
 
     <dependencies>

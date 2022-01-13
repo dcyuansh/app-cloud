@@ -1,12 +1,12 @@
 spring:
   application:
-    name: app-provider
+    name: app-feign
 server:
-  port: 8081
+  port: 8082
 eureka:
   instance:
     hostname: localhost
-    appname: service provider
+    appname: app-feign
   client:
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/

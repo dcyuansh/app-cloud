@@ -6,19 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="app-common" />
         <module name="app-eureka" />
+        <module name="app-feign" />
         <module name="app-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="app-cloud" target="11" />
+      <module name="app-common" target="11" />
       <module name="app-eureka" target="11" />
+      <module name="app-feign" target="11" />
       <module name="app-provider" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="app-common" options="-parameters" />
       <module name="app-eureka" options="-parameters" />
+      <module name="app-feign" options="-parameters" />
       <module name="app-provider" options="-parameters" />
     </option>
   </component>
