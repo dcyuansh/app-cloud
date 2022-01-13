@@ -1,6 +1,6 @@
-package com.app.feign.service.impl;
+package com.app.provider.service.impl;
 
-import com.app.feign.service.ProviderService;
+import com.app.provider.service.ProviderService;
 import com.core.model.DataModel;
 import org.springframework.stereotype.Service;
 

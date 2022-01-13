@@ -1,6 +1,6 @@
-package com.app.feign.controller;
+package com.app.provider.controller;
 
-import com.app.feign.service.ProviderService;
+import com.app.provider.service.ProviderService;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
@@ -41,7 +41,7 @@ public class ProviderController extends BaseController {
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userModel = providerService.queryUser(queryModel);
             this.handleSuccess(resultModel, userModel);
-            logger.info("call feign service success, request time:{}", LocalDateTime.now());
+            logger.info("call provider service success, request time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

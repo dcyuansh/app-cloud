@@ -1,4 +1,4 @@
-package com.app.feign.repository;
+package com.app.provider.repository;
 
 import org.springframework.stereotype.Repository;
 
