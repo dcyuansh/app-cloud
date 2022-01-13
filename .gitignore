@@ -3,3 +3,4 @@ logs/*
 .idea\*
 *.class
 */target/*
+.idea/workspace.xml
