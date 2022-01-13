@@ -1,4 +1,4 @@
-package com.app.feign.service;
+package com.app.provider.service;
 
 import com.core.model.DataModel;
 
@@ -8,5 +8,5 @@ import com.core.model.DataModel;
  */
 public interface FeignService {
 
-    DataModel queryUser(DataModel saveModel);
+    DataModel queryUser(DataModel requestModel);
 }

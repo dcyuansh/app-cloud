@@ -6,7 +6,7 @@ server:
 eureka:
   instance:
     hostname: localhost
-    appname: service provider
+    appname: app-provider
   client:
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
