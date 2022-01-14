@@ -1,6 +1,7 @@
 logs/*
-.idea/*
-.idea\*
 *.class
 */target/*
+.idea\libraries\*
 .idea/workspace.xml
+.idea/libraries/*
+.idea/uiDesigner.xml
