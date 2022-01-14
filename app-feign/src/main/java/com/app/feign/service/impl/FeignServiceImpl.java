@@ -1,7 +1,7 @@
-package com.app.provider.service.impl;
+package com.app.feign.service.impl;
 
-import com.app.provider.repository.FeignRepository;
-import com.app.provider.service.FeignService;
+import com.app.feign.repository.FeignRepository;
+import com.app.feign.service.FeignService;
 import com.core.model.DataModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

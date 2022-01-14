@@ -1,4 +1,4 @@
-package com.app.provider.repository;
+package com.app.feign.repository;
 
 import com.core.model.DataModel;
 import org.springframework.cloud.openfeign.FeignClient;

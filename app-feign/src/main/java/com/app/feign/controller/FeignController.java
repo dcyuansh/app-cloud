@@ -1,6 +1,6 @@
-package com.app.provider.controller;
+package com.app.feign.controller;
 
-import com.app.provider.service.FeignService;
+import com.app.feign.service.FeignService;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;

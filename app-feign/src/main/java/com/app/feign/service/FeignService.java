@@ -1,4 +1,4 @@
-package com.app.provider.service;
+package com.app.feign.service;
 
 import com.core.model.DataModel;
 
