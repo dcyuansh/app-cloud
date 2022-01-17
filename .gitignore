@@ -1,6 +1,7 @@
 logs/*
 *.class
 */target/*
+target\*
 .idea\libraries\*
 .idea/workspace.xml
 .idea/libraries/*
