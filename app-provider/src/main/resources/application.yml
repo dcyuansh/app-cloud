@@ -1,6 +1,13 @@
 spring:
   application:
     name: app-provider
+  cloud:
+    # 负载均衡器缓存
+    loadbalancer:
+      cache:
+        enabled: true
+        caffeine:
+          spec: initialCapacity=500,expireAfterWrite=5s
 server:
   port: 8081
 eureka:
