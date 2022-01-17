@@ -9,3 +9,13 @@ eureka:
     fetch-registry: false  #false 表示自己端就是注册中心,并不需要去检索服务
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   #设置与 Eureka Server 交互的地址查询服务和注册服务都需要依赖这个地址(服务暴露的地址)
+  server:
+    my-url:  http://${eureka.instance.hostname}:${server.port}/
+spring:
+  cloud:
+    # 负载均衡器缓存
+    loadbalancer:
+      cache:
+        enabled: true
+        caffeine:
+          spec: initialCapacity=500,expireAfterWrite=5s
