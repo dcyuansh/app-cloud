@@ -6,3 +6,7 @@ target\*
 .idea/workspace.xml
 .idea/libraries/*
 .idea/uiDesigner.xml
+app-eureka/app-eureka.iml
+app-common/app-common.iml
+app-provider/app-provider.iml
+app-feign/app-feign.iml
