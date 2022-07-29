@@ -3,7 +3,8 @@ server:
 
 spring:
   application:
-    name: app-feign
+    name: app-openfeign
+
   cloud:
     # 负载均衡器缓存
     loadbalancer:
@@ -15,12 +16,24 @@ spring:
 eureka:
   instance:
     hostname: localhost
-    appname: app-feign
+    appname: app-openfeign
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
+
+  #openfeign通过属性配置文件设置ribbon负载均衡策略
+app-openfeign:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+  #曾强日志
+logging:
+  level:
+    #feign 日志以什么样的级别监控该接口
+    com.app.openfeign.repository.FeignRepository: debug
+
 
 
 

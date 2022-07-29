@@ -27,7 +27,7 @@
         <module>app-provider-02</module>
         <module>app-provider-03</module>
         <module>app-common</module>
-        <module>app-feign</module>
+        <module>app-openfeign</module>
     </modules>
 
     <dependencies>

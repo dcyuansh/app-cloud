@@ -11,11 +11,11 @@
 
 
     <groupId>com.app</groupId>
-    <artifactId>app-feign</artifactId>
+    <artifactId>app-openfeign</artifactId>
     <version>0.0.1</version>
-    <name>app-feign</name>
+    <name>app-openfeign</name>
     <packaging>jar</packaging>
-    <description>app feign</description>
+    <description>app openfeign</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -43,7 +43,13 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--provider-->
+        <!-- Ribbon 依赖-->
+     <!--   <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <version>2.2.5.RELEASE</version>
+        </dependency>-->
+        <!--添加 OpenFeign 依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>

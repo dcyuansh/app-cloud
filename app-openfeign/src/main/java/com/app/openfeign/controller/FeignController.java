@@ -1,6 +1,6 @@
-package com.app.feign.controller;
+package com.app.openfeign.controller;
 
-import com.app.feign.service.FeignService;
+import com.app.openfeign.service.FeignService;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
@@ -41,7 +41,7 @@ public class FeignController extends BaseController {
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userInfo = feignService.queryUser(queryModel);
             this.handleSuccess(resultModel, userInfo.getFieldValue("data"));
-            logger.info("feign call user info success, request time:{}", LocalDateTime.now());
+            logger.info("openfeign call user info success, request time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

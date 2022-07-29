@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app-cloud.iml" filepath="$PROJECT_DIR$/app-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-common/app-common.iml" filepath="$PROJECT_DIR$/app-common/app-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-eureka/app-eureka.iml" filepath="$PROJECT_DIR$/app-eureka/app-eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-feign/app-feign.iml" filepath="$PROJECT_DIR$/app-feign/app-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-openfeign/app-openfeign.iml" filepath="$PROJECT_DIR$/app-openfeign/app-openfeign.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider/app-provider.iml" filepath="$PROJECT_DIR$/app-provider/app-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-02/app-provider-02.iml" filepath="$PROJECT_DIR$/app-provider-02/app-provider-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-03/app-provider-03.iml" filepath="$PROJECT_DIR$/app-provider-03/app-provider-03.iml" />
