@@ -9,24 +9,39 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>com.app</groupId>
-    <artifactId>app-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>app-eureka</name>
+    <artifactId>app-provider-03</artifactId>
+    <version>0.0.1</version>
+    <name>app-provider-03</name>
     <packaging>jar</packaging>
-    <description>eureka server</description>
+    <description>provider server 03</description>
     <properties>
         <java.version>11</java.version>
     </properties>
     <dependencies>
+        <!--添加app-common包依赖-->
+        <dependency>
+            <groupId>com.app</groupId>
+            <artifactId>app-common</artifactId>
+            <version>0.0.1</version>
+           <!-- <scope>system</scope>-->
+        </dependency>
+        <!--Spring Boot Web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- 最新版的 eureka 服务端包 -->
+        <!--Spring Boot 测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- 最新版的 eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!-- 监控管理 -->
         <dependency>
