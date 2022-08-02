@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/app-provider/app-provider.iml" filepath="$PROJECT_DIR$/app-provider/app-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-02/app-provider-02.iml" filepath="$PROJECT_DIR$/app-provider-02/app-provider-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-03/app-provider-03.iml" filepath="$PROJECT_DIR$/app-provider-03/app-provider-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-ribbon/app-ribbon.iml" filepath="$PROJECT_DIR$/app-ribbon/app-ribbon.iml" />
     </modules>
   </component>
 </project>

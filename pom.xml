@@ -28,6 +28,7 @@
         <module>app-provider-03</module>
         <module>app-common</module>
         <module>app-openfeign</module>
+        <module>app-ribbon</module>
     </modules>
 
     <dependencies>
