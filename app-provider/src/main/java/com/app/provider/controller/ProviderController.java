@@ -38,6 +38,8 @@ public class ProviderController extends BaseController {
     public Map<String, Object> queryUser(@RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
         try {
+            //for test
+            //TimeUnit.SECONDS.sleep(6);
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userModel = providerService.queryUser(queryModel);
             this.handleSuccess(resultModel, userModel);

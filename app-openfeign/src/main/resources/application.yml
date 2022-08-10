@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: app-openfeign
+    name: app-hystrix
 
   cloud:
     # 负载均衡器缓存
@@ -16,7 +16,7 @@ spring:
 eureka:
   instance:
     hostname: localhost
-    appname: app-openfeign
+    appname: app-hystrix
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -31,7 +31,7 @@ app-openfeign:
   #曾强日志
 logging:
   level:
-    #feign 日志以什么样的级别监控该接口
+    #openfeign 日志以什么样的级别监控该接口
     com.app.openfeign.repository.FeignRepository: debug
 
 

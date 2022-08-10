@@ -41,7 +41,7 @@ public class FeignController extends BaseController {
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userInfo = feignService.queryUser(queryModel);
             this.handleSuccess(resultModel, userInfo.getFieldValue("data"));
-            logger.info("openfeign call user info success, request time:{}", LocalDateTime.now());
+            logger.info("hystrix call user info success, request time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

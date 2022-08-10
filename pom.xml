@@ -29,6 +29,7 @@
         <module>app-common</module>
         <module>app-openfeign</module>
         <module>app-ribbon</module>
+        <module>app-hystrix</module>
     </modules>
 
     <dependencies>
