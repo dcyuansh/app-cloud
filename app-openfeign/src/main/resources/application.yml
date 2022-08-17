@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: app-hystrix
+    name: app-openfeign
 
   cloud:
     # 负载均衡器缓存
@@ -16,7 +16,7 @@ spring:
 eureka:
   instance:
     hostname: localhost
-    appname: app-hystrix
+    appname: app-openfeign
   client:
     register-with-eureka: true
     fetch-registry: true
