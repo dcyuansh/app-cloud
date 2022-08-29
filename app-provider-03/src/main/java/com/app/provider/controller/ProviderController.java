@@ -41,7 +41,7 @@ public class ProviderController extends BaseController {
             DataModel queryModel = this.getInputData(requestMap);
             DataModel userModel = providerService.queryUser(queryModel);
             this.handleSuccess(resultModel, userModel);
-            logger.info("call provider service success, request time:{}", LocalDateTime.now());
+            logger.info("call provider-03 service success, request time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

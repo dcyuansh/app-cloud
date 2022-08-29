@@ -1,6 +1,5 @@
-package com.app.provider.controller;
+package com.app.consumer.controller;
 
-import com.app.provider.service.ProviderService;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -20,13 +20,17 @@ import java.util.Map;
  * @version 1.0
  */
 @RestController
-@RequestMapping("/api/provider")
-public class ProviderController extends BaseController {
+@RequestMapping("/api/consumer")
+public class ConsumerController extends BaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    //面向微服务编程，即通过微服务的名称来获取调用地址
+    // 使用注册到 Spring Cloud Eureka 服务注册中心中的服务，即 application.name
+    private static final String REST_URL_PROVIDER_PREFIX = "http://app-provider";
+
     @Autowired
-    private ProviderService providerService;
+    private RestTemplate restTemplate;
 
 
     /***
@@ -39,9 +43,9 @@ public class ProviderController extends BaseController {
         DataModel resultModel = new DataModel();
         try {
             DataModel queryModel = this.getInputData(requestMap);
-            DataModel userModel = providerService.queryUser(queryModel);
+            DataModel userModel = restTemplate.postForObject(REST_URL_PROVIDER_PREFIX + "/api/provider/query-user", requestMap, DataModel.class);
             this.handleSuccess(resultModel, userModel);
-            logger.info("call provider-02 service success, request time:{}", LocalDateTime.now());
+            logger.info("ribbon call service success, call time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {

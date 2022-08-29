@@ -9,10 +9,9 @@ import org.springframework.context.annotation.Bean;
  * @version 1.0
  */
 @Configurable
-public class OpenFeignLoggingConfig {
+public class OpenFeignConfig {
 
-    @Bean
-    Logger.Level openFeignLogLevel() {
-        return Logger.Level.FULL;
-    }
+
+
+
 }
