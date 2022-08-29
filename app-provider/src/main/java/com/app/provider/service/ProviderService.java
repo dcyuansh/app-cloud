@@ -3,7 +3,7 @@ package com.app.provider.service;
 import com.core.model.DataModel;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public interface ProviderService {

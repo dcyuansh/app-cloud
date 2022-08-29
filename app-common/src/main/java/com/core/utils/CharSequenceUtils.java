@@ -1,7 +1,7 @@
 package com.core.utils;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class CharSequenceUtils {

@@ -3,7 +3,7 @@ package com.app.consumer.repository;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 @Repository

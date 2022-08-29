@@ -3,7 +3,7 @@ package com.core.utils;
 import java.util.UUID;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class UUidUtils {

@@ -1,7 +1,7 @@
 package com.core.constants;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public final class SystemConstant {

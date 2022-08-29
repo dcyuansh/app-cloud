@@ -5,7 +5,7 @@ import com.core.utils.NumberUtils;
 import java.math.BigDecimal;
 
 /**
- * @author spring.yuan
+ * @author dc.yuan
  * @version 1.0
  */
 public class BigDecimalConverter {

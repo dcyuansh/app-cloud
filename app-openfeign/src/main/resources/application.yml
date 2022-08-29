@@ -7,7 +7,8 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848  #Nacos server 的地址
-    loadbalancer:    # 负载均衡器缓存
+    # 负载均衡器缓存
+    loadbalancer:
       cache:
         enabled: true
         caffeine:
