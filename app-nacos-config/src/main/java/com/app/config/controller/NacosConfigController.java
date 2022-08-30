@@ -1,6 +1,5 @@
 package com.app.config.controller;
 
-import com.core.controller.BaseController;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 @RequestMapping("/api/nacos")
-public class NacosConfigController extends BaseController {
+public class NacosConfigController {
 
     @Value("${config.info}")
     private String ConfigInfo;

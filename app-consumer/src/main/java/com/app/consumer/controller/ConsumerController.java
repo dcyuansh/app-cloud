@@ -42,10 +42,9 @@ public class ConsumerController extends BaseController {
     public Map<String, Object> queryUser(@RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
         try {
-            DataModel queryModel = this.getInputData(requestMap);
             DataModel userModel = restTemplate.postForObject(REST_URL_PROVIDER_PREFIX + "/api/provider/query-user", requestMap, DataModel.class);
             this.handleSuccess(resultModel, userModel);
-            logger.info("ribbon call service success, call time:{}", LocalDateTime.now());
+            logger.info("consumer call service success, call time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
