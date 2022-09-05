@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: app-gateway
+
   cloud:
     nacos:
       discovery:
@@ -14,6 +15,7 @@ spring:
         enabled: true
         caffeine:
           spec: initialCapacity=500,expireAfterWrite=5s
+
     gateway: #网关路由配置
       routes:
       - id: app-consumer   #路由 id,唯一，建议与服务名对应
@@ -23,8 +25,26 @@ spring:
         #以下是断言条件，必选全部符合条件
         - Path=/api/consumer/**
         - Method=POST
+        filters:
+        - RewritePath=/api/consumer(?<segment>/?.*), /api/consumer$\{segment}
       - id: app-openfeign
         uri: lb://app-openfeign
         predicates:
         - Path=/api/feign/**
+        filters:
+        - RewritePath=/api/feign(?<segment>/?.*), /api/feign$\{segment}
 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            # 允许携带认证信息
+            allow-credentials: true
+            # 允许跨域的源(网站域名/ip)，设置*为全部
+            allowedOriginPatterns: "*"
+            # 允许跨域的method， 默认为GET和OPTIONS，设置*为全部
+            allowedMethods: "*"
+            # 允许跨域请求里的head字段，设置*为全部
+            allowedHeaders: "*"
+
+      default-filters:
+      - DedupeResponseHeader=Vary Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST

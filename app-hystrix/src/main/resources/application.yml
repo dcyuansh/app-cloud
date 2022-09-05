@@ -30,17 +30,17 @@ feign:
 
     ######################配置请求超时时间##########################
 hystrix:
-      command:
-        default:
-          execution:
-            isolation:
-              thread:
-                timeoutInMilliseconds: 5000
-        ####################配置具体方法超时时间 为 3 秒########################
-        HystrixRepository#queryUser(Map):
-          execution:
-            isolation:
-              thread:
-                timeoutInMilliseconds: 3000
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    ####################配置具体方法超时时间 为 3 秒########################
+    HystrixRepository#queryUser(Map):
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
 
 
