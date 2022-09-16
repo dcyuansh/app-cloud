@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class NacosConfigController {
 
     @Value("${config.info}")
-    private String ConfigInfo;
+    private String configInfo;
 
 
     @RequestMapping(method = RequestMethod.GET, value = "/config/info")
     public String getConfigInfo() {
-        return ConfigInfo;
+        return configInfo;
     }
 }

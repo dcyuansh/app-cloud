@@ -1,5 +1,6 @@
 package com.app.openfeign.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.app.openfeign.service.FeignService;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
@@ -34,6 +35,7 @@ public class FeignController extends BaseController {
      * @param requestMap
      * @return
      */
+    @SentinelResource(value = "sentinel-consumer-openfeign", fallback = "handlerFallback")
     @RequestMapping(method = RequestMethod.POST, value = "/query-user")
     public Map<String, Object> queryUser(@RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
@@ -50,4 +52,10 @@ public class FeignController extends BaseController {
         return resultModel;
     }
 
+
+    public Map<String, Object> handlerFallback(@RequestBody Map<String, Object> requestMap, Throwable e) {
+        DataModel resultModel = new DataModel();
+        this.handleException(resultModel, new Exception("接口访问异常，服务已经被降级！"));
+        return resultModel;
+    }
 }

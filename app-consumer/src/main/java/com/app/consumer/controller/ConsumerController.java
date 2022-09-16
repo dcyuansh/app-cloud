@@ -1,5 +1,7 @@
 package com.app.consumer.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.core.controller.BaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
@@ -38,6 +40,7 @@ public class ConsumerController extends BaseController {
      * @param requestMap
      * @return
      */
+    @SentinelResource(value = "sentinel-consumer", blockHandler = "handleBlockMsg")
     @RequestMapping(method = RequestMethod.POST, value = "/query-user")
     public Map<String, Object> queryUser(@RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
@@ -50,6 +53,12 @@ public class ConsumerController extends BaseController {
         } catch (Exception e) {
             this.handleException(resultModel, e);
         }
+        return resultModel;
+    }
+
+    public Map<String, Object> handleBlockMsg(@RequestBody Map<String, Object> requestMap, BlockException exception) {
+        DataModel resultModel = new DataModel();
+        this.handleException(resultModel, new Exception("异常访问，你已经被限流访问！"));
         return resultModel;
     }
 

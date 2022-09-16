@@ -23,7 +23,6 @@
     </properties>
 
     <modules>
-        <module>app-eureka</module>
         <module>app-nacos-config</module>
         <module>app-gateway</module>
         <module>app-common</module>
@@ -32,8 +31,6 @@
         <module>app-provider-03</module>
         <module>app-consumer</module>
         <module>app-openfeign</module>
-        <module>app-ribbon</module>
-        <module>app-hystrix</module>
     </modules>
 
 
