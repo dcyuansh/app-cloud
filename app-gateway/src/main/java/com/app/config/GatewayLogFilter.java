@@ -34,7 +34,7 @@ public class GatewayLogFilter implements GlobalFilter, Ordered {
                         log.info("访问接口host: " + exchange.getRequest().getURI().getHost());
                         log.info("访问接口端口: " + exchange.getRequest().getURI().getPort());
                         log.info("访问接口URL: " + exchange.getRequest().getURI().getPath());
-                        log.info("访问参数: " + exchange.getRequest().getURI().getRawQuery());
+                        log.info("访问参数: " + exchange.getRequest().getQueryParams());
                         log.info("访问时间: " + (Long.valueOf(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS"))) - startTime) + "ms");
                         log.info("-----------Gateway打印日志结束-------------");
                     }
