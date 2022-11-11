@@ -4,12 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app-cloud.iml" filepath="$PROJECT_DIR$/app-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-common/app-common.iml" filepath="$PROJECT_DIR$/app-common/app-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-eureka/app-eureka.iml" filepath="$PROJECT_DIR$/app-eureka/app-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-consumer/app-consumer.iml" filepath="$PROJECT_DIR$/app-consumer/app-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-gateway/app-gateway.iml" filepath="$PROJECT_DIR$/app-gateway/app-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-nacos-config/app-nacos-config.iml" filepath="$PROJECT_DIR$/app-nacos-config/app-nacos-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-openfeign/app-openfeign.iml" filepath="$PROJECT_DIR$/app-openfeign/app-openfeign.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider/app-provider.iml" filepath="$PROJECT_DIR$/app-provider/app-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-02/app-provider-02.iml" filepath="$PROJECT_DIR$/app-provider-02/app-provider-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-provider-03/app-provider-03.iml" filepath="$PROJECT_DIR$/app-provider-03/app-provider-03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-ribbon/app-ribbon.iml" filepath="$PROJECT_DIR$/app-ribbon/app-ribbon.iml" />
     </modules>
   </component>
 </project>

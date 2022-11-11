@@ -7,18 +7,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="app-common" />
-        <module name="app-eureka" />
+        <module name="app-consumer" />
+        <module name="app-gateway" />
+        <module name="app-nacos-config" />
         <module name="app-openfeign" />
         <module name="app-provider" />
         <module name="app-provider-02" />
         <module name="app-provider-03" />
-        <module name="app-ribbon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="app-cloud" target="11" />
       <module name="app-common" target="11" />
+      <module name="app-consumer" target="11" />
       <module name="app-eureka" target="11" />
+      <module name="app-gateway" target="11" />
+      <module name="app-hystrix" target="11" />
+      <module name="app-nacos-config" target="11" />
       <module name="app-openfeign" target="11" />
       <module name="app-provider" target="11" />
       <module name="app-provider-02" target="11" />
@@ -29,7 +34,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="app-common" options="-parameters" />
+      <module name="app-consumer" options="-parameters" />
       <module name="app-eureka" options="-parameters" />
+      <module name="app-gateway" options="-parameters" />
+      <module name="app-hystrix" options="-parameters" />
+      <module name="app-nacos-config" options="-parameters" />
       <module name="app-openfeign" options="-parameters" />
       <module name="app-provider" options="-parameters" />
       <module name="app-provider-02" options="-parameters" />
