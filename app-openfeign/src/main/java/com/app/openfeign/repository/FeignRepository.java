@@ -1,8 +1,10 @@
 package com.app.openfeign.repository;
 
+import com.app.openfeign.repository.impl.FeignRepositoryFallBackImpl;
 import com.core.model.DataModel;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author dc.yuan
  * @version 1.0
  */
-@FeignClient(name = "app-provider")
+@FeignClient(name = "app-provider", fallback = FeignRepositoryFallBackImpl.class)
 @Component
 public interface FeignRepository {
 
@@ -21,6 +23,6 @@ public interface FeignRepository {
      * @return
      */
     @RequestMapping(method = RequestMethod.POST, value = "/api/provider/query-user")
-    DataModel queryUser(DataModel requestMap);
+    DataModel queryUser(@RequestBody DataModel requestMap);
 
 }
