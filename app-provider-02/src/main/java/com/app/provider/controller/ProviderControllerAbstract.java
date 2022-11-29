@@ -1,7 +1,7 @@
 package com.app.provider.controller;
 
 import com.app.provider.service.ProviderService;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
 import org.slf4j.Logger;
@@ -16,12 +16,12 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @RestController
 @RequestMapping("/api/provider")
-public class ProviderController extends BaseController {
+public class ProviderControllerAbstract extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 

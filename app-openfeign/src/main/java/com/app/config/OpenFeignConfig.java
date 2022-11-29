@@ -3,7 +3,7 @@ package com.app.config;
 import org.springframework.beans.factory.annotation.Configurable;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @Configurable

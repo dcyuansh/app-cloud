@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class LocalDateUtils {

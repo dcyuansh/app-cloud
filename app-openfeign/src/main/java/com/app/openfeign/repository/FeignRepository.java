@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @FeignClient(name = "app-provider", fallback = FeignRepositoryFallBackImpl.class)

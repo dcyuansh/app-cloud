@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class DateUtils {

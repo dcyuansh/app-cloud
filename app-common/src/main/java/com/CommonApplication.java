@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @SpringBootApplication

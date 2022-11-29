@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @RestController

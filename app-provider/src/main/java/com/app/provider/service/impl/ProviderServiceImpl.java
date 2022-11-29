@@ -5,7 +5,7 @@ import com.core.model.DataModel;
 import org.springframework.stereotype.Service;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @Service

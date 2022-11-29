@@ -2,7 +2,7 @@ package com.app.consumer.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.core.controller.BaseController;
+import com.core.controller.AbstractBaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
 import org.slf4j.Logger;
@@ -18,12 +18,12 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @RestController
 @RequestMapping("/api/consumer")
-public class ConsumerController extends BaseController {
+public class ConsumerControllerAbstract extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 

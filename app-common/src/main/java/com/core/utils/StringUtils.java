@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 public class StringUtils {

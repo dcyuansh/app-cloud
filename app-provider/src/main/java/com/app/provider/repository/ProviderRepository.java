@@ -3,7 +3,7 @@ package com.app.provider.repository;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @Repository

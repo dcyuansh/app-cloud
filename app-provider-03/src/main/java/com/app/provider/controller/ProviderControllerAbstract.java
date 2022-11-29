@@ -1,8 +1,7 @@
-package com.app.openfeign.controller;
+package com.app.provider.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.app.openfeign.service.FeignService;
-import com.core.controller.BaseController;
+import com.app.provider.service.ProviderService;
+import com.core.controller.AbstractBaseController;
 import com.core.exception.ValidationException;
 import com.core.model.DataModel;
 import org.slf4j.Logger;
@@ -17,17 +16,17 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
- * @author dc.yuan
+ * @author DC Yuan
  * @version 1.0
  */
 @RestController
-@RequestMapping("/api/feign")
-public class FeignController extends BaseController {
+@RequestMapping("/api/provider")
+public class ProviderControllerAbstract extends AbstractBaseController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private FeignService feignService;
+    private ProviderService providerService;
 
 
     /***
@@ -35,15 +34,14 @@ public class FeignController extends BaseController {
      * @param requestMap
      * @return
      */
-    @SentinelResource(value = "sentinel-consumer-openfeign", fallback = "handlerFallback")
     @RequestMapping(method = RequestMethod.POST, value = "/query-user")
     public Map<String, Object> queryUser(@RequestBody Map<String, Object> requestMap) {
         DataModel resultModel = new DataModel();
         try {
             DataModel queryModel = this.getInputData(requestMap);
-            DataModel userInfo = feignService.queryUser(queryModel);
-            this.handleSuccess(resultModel, userInfo.getFieldValue("data"));
-            logger.info("feign call user info success, request time:{}", LocalDateTime.now());
+            DataModel userModel = providerService.queryUser(queryModel);
+            this.handleSuccess(resultModel, userModel);
+            logger.info("call provider-03 service success, request time:{}", LocalDateTime.now());
         } catch (ValidationException ve) {
             this.handleValidationException(resultModel, ve);
         } catch (Exception e) {
@@ -52,10 +50,4 @@ public class FeignController extends BaseController {
         return resultModel;
     }
 
-
-    public Map<String, Object> handlerFallback(@RequestBody Map<String, Object> requestMap, Throwable e) {
-        DataModel resultModel = new DataModel();
-        this.handleException(resultModel, new Exception("接口访问异常，服务已经被降级！"));
-        return resultModel;
-    }
 }
